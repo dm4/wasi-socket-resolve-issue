@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    command: |
+      bash -c -- "while true; do sleep 30; done;"
+  target-service:
+    image: ubuntu:22.04
+    command: |
+      bash -c -- "while true; do sleep 30; done;"
